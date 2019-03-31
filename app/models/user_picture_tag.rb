@@ -1,0 +1,2 @@
+class UserPictureTag < ApplicationRecord
+end
