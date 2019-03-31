@@ -7,27 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create!(name: "Lindsey", email: "lindsey@email.com", password: "password", date_of_birth: "09/17/1992", avatar_id: 1)
-User.create!(name: "Dan", email: "dan@email.com", password: "password", date_of_birth: "09/17/1992", avatar_id: 1)
-User.create!(name: "Lindsey", email: "lindsey@email.com", password: "password", date_of_birth: "09/17/1992", avatar_id: 1)
-
-Avatar.create
-
-Attraction.create
-
-Category.create
-
-City.create
-
-Rating.create
-
-UserPicture.create
-
-Tag.create
-
-AttractionTag.create
-
-UserPictureTag.create
-
-Trip.create
-
-ItineraryItem.create
+User.create!(name: "Dan", email: "dan@email.com", password: "password", date_of_birth: "08/27/1989", avatar_id: 2)
+User.create!(name: "Justin", email: "justin@email.com", password: "password", date_of_birth: "01/05/1995", avatar_id: 4)
