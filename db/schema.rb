@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_31_213641) do
+ActiveRecord::Schema.define(version: 2019_03_31_215039) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_03_31_213641) do
     t.integer "average_time_minutes_spent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
   end
 
   create_table "avatars", force: :cascade do |t|
@@ -65,11 +66,11 @@ ActiveRecord::Schema.define(version: 2019_03_31_213641) do
 
   create_table "ratings", force: :cascade do |t|
     t.integer "rating"
-    t.string "comment"
     t.integer "user_id"
     t.integer "attraction_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "comment"
   end
 
   create_table "tags", force: :cascade do |t|
