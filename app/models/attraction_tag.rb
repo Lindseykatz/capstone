@@ -1,0 +1,2 @@
+class AttractionTag < ApplicationRecord
+end
