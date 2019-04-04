@@ -1,0 +1,1 @@
+json.partial! "attraction.json.jbuilder", attraction: @attraction

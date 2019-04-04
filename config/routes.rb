@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   # end
   namespace :api do
     post "/users" => "users#create"
+    get "/attractions" => "attractions#index"
+    post "/attractions" => "attractions#create"
+    get "/attractions/:id" => "attractions#show"
+    patch "/attractions/:id" => "attractions#update"
   end
 end
