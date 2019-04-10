@@ -1,0 +1,1 @@
+json.partial! "trip.json.jbuilder", trip: @trip

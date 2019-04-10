@@ -1,9 +1,4 @@
 class Api::UsersController < ApplicationController
-  
-  def index
-    @users = User.all
-    render "index.json.jbuilder"
-  end
 
   def create
     user = User.new(
@@ -12,10 +7,9 @@ class Api::UsersController < ApplicationController
       password: params[:password],
       password_confirmation: params[:password_confirmation],
       date_of_birth: params[:date_of_birth],
-      avatar: params[:avatar_id],
-      current_city: params [:current_city]
+      avatar_id: params[:avatar_id],
+      current_city: params[:current_city]
     )
-
     if user.save
       render json: {message: 'User created successfully'}, status: :created
     else
@@ -23,7 +17,4 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  def show
-    @user = User.find_by 
-  end
 end

@@ -20,6 +20,7 @@ Avatar.create!(description: "Woman 5" , url: "woman (4).png")
 User.create!(name: "Lindsey", email: "lindsey@email.com", password: "password", date_of_birth: "09/17/1992", avatar_id: 8, current_city: "San Francisco")
 User.create!(name: "Dan", email: "dan@email.com", password: "password", date_of_birth: "08/27/1989", avatar_id: 2, current_city: "New York City")
 User.create!(name: "Justin", email: "justin@email.com", password: "password", date_of_birth: "01/05/1995", avatar_id: 3, current_city: "Chicago")
+User.create!(name: "Mellisa", email: "mellisa@email.com", password: "password", date_of_birth: "04/30/1992", avatar_id: 6, current_city: "Seattle")
 
 City.create!(city_name: "Chicago", state: "Illinois", country: "USA")
 City.create!(city_name: "Barcelona", state: " ", country: "Spain")
@@ -31,8 +32,8 @@ Attraction.create!(name: "Cloudgate", street_address: "201 E Randolph St", city_
 Attraction.create!(name: "Wendella Boats Tours", street_address: "400 N Michigan Ave", city_id: 1, postal_code: "60611", main_image_url: "https://wendellaboats.com/Content/images/Chicago-River-Architecture-Tour/1.jpg", category_id: 2, average_time_minutes_spent: 90, description: "Be inspired by the captivating, visual art that is Chicago’s legendary architecture, and the exceptional architects who created this ever-changing, dynamic legacy for all to enjoy and admire. This comprehensive tour will navigate through the heart of the city on all three branches of the Chicago River while your professionally-trained architectural guide tells the story of more than 130 years of innovation in design, style and technique and why it is important today.")
 Attraction.create!(name: "Lou Malnati's", street_address: "439 N Wells St", city_id: 1, postal_code: "60654", main_image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQVbmOV_gHnZ_G7fIUbeNUQN_KXlZxdc4Y7STRhaqH9cCxubA3", category_id: 1, average_time_minutes_spent: 90, description: "Lou Malnati's Pizzeria is an American Chicago-style pizza restaurant chain headquartered in Northbrook, Illinois. It was founded by the son of Rudy Malnati, who was instrumental in developing the recipe for Chicago-style pizza, and it has become one of the Chicago area's best-known local lines of pizza restaurants.")
 Attraction.create!(name: "La Sagrada Familia", street_address: "Carrer de Mallorca, 401", city_id: 2, postal_code: "08013", main_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sagfampassion.jpg/785px-Sagfampassion.jpg", category_id: 2, average_time_minutes_spent: 45, description: "The Temple Expiatori de la Sagrada Família is a large unfinished Roman Catholic church in Barcelona, designed by Catalan architect Antoni Gaudí (1852–1926). Gaudí's work on the building is part of a UNESCO World Heritage Site.")
-Attraction.create!(name: "Tickets", street_address: "Av. del Paraŀlel, 164", city_id: 1, postal_code: "08015", main_image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtTt3o18rqi-3gZQ3PYOEUxfAlyrioAJXNVcSDinGuus4Y4dvM", category_id: 2, average_time_minutes_spent: 120, description: "Tickets restaurant by chef Albert Adrià. Fun and vanguard tapas with a Michelin star by elBarri restaurant group in Barcelona.")
-
+Attraction.create!(name: "Tickets", street_address: "Av. del Paraŀlel, 164", city_id: 2, postal_code: "08015", main_image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtTt3o18rqi-3gZQ3PYOEUxfAlyrioAJXNVcSDinGuus4Y4dvM", category_id: 1, average_time_minutes_spent: 120, description: "Tickets restaurant by chef Albert Adrià. Fun and vanguard tapas with a Michelin star by elBarri restaurant group in Barcelona.")
+Attraction.create!(name: "The Art Institute of Chicago", street_address: "111 S Michigan Ave", city_id: 1, postal_code: "60603", main_image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Okkd8NHb85K5PQFUShpolP-gHrHsnfaiD8RTGdWs60WumSNe", category_id: 2, average_time_minutes_spent: 150, description: "The Art Institute of Chicago, founded in 1879 and located in Chicago's Grant Park, is one of the oldest and largest art museums in the United States. Recognized for its curatorial efforts and popularity among visitors, the museum hosts approximately 1.5 million guests annually.")
 
 Rating.create!(rating: 5, comment: "Great!", user_id: 1, attraction_id: 1)
 Rating.create!(rating: 4, comment: "Fun!", user_id: 1, attraction_id: 2)
@@ -90,8 +91,8 @@ Trip.create!(user_id: 2, city_id: 1, trip_name: "Chicago birthday", start_date: 
 
 ItineraryItem.create!(trip_id: 1, attraction_id: 1, start_datetime: "2019-06-01 1:00 PM")
 ItineraryItem.create!(trip_id: 1, attraction_id: 2, start_datetime: "2019-06-02 11:00 AM")
-ItineraryItem.create!(trip_id: 1, attraction_id: 4, start_datetime: "2019-06-01 3:00 PM")
-ItineraryItem.create!(trip_id: 1, attraction_id: 1, start_datetime: "2019-08-13 11:00 AM")
-ItineraryItem.create!(trip_id: 1, attraction_id: 1, start_datetime: "2019-08-14 11:00 AM")
-ItineraryItem.create!(trip_id: 1, attraction_id: 1, start_datetime: "2019-07-03 1:00 PM")
-ItineraryItem.create!(trip_id: 1, attraction_id: 1, start_datetime: "2019-07-04 11:00 AM")
+ItineraryItem.create!(trip_id: 1, attraction_id: 3, start_datetime: "2019-06-01 3:00 PM")
+ItineraryItem.create!(trip_id: 2, attraction_id: 4, start_datetime: "2019-08-13 11:00 AM")
+ItineraryItem.create!(trip_id: 2, attraction_id: 5, start_datetime: "2019-08-14 11:00 AM")
+ItineraryItem.create!(trip_id: 3, attraction_id: 1, start_datetime: "2019-07-03 1:00 PM")
+ItineraryItem.create!(trip_id: 3, attraction_id: 2, start_datetime: "2019-07-04 11:00 AM")

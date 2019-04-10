@@ -18,7 +18,7 @@ class Api::AttractionsController < ApplicationController
     if @attraction.save
       render "show.json.jbuilder"
     else
-      render json: {errors: @product.errors.full_messages}, status: :unprocessable_entity
+      render json: {errors: @attraction.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
@@ -37,10 +37,10 @@ class Api::AttractionsController < ApplicationController
     @attraction.category_id = params[:category_id] || @attraction.category_id
     @attraction.average_time_minutes_spent = params[:average_time_minutes_spent] || @attraction.average_time_minutes_spent
     @attraction.description = params[:description] || @attraction.description
-    if @product.save
+    if @attraction.save
       render "show.json.jbuilder"
     else
-      render json: {errors: @product.errors.full_messages}, status: :unprocessable_entity
+      render json: {errors: @attraction.errors.full_messages}, status: :unprocessable_entity
     end
   end
 end
