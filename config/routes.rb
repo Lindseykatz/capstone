@@ -17,6 +17,9 @@ Rails.application.routes.draw do
     get "/trips" => "trips#index"
     post "/trips" => "trips#create"
     get "/trips/:id" => "trips#show"
-
+    post "/itinerary_items/" => "itinerary_items#create"
+    get "/itinerary_items/:id" => "itinerary_items#show"
+    patch "/itinerary_items/:id" => "itinerary_items#show"
+    delete "/itinerary_items/:id" => "itinerary_items#destroy"
   end
 end
