@@ -101,7 +101,7 @@ ActiveRecord::Schema.define(version: 2019_04_03_235121) do
     t.integer "user_id"
     t.integer "attraction_id"
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", null: falseurl
   end
 
   create_table "users", force: :cascade do |t|

@@ -17,9 +17,13 @@ Rails.application.routes.draw do
     get "/trips" => "trips#index"
     post "/trips" => "trips#create"
     get "/trips/:id" => "trips#show"
-    post "/itinerary_items/" => "itinerary_items#create"
+    post "/itinerary_items" => "itinerary_items#create"
     get "/itinerary_items/:id" => "itinerary_items#show"
-    patch "/itinerary_items/:id" => "itinerary_items#show"
+    patch "/itinerary_items/:id" => "itinerary_items#update"
     delete "/itinerary_items/:id" => "itinerary_items#destroy"
+    get "/user_pictures" => "user_pictures#index"
+    post "/user_pictures" => "user_pictures#create"
+    get "/user_pictures/:id" => "user_pictures#show"
+    delete "/user_pictures/:id" => "user_pictures#destroy"
   end
 end
