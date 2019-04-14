@@ -1,4 +1,6 @@
 class Api::UserPicturesController < ApplicationController
+  before_action :authenticate_user, except: [:index, :show]
+  
   def index
     @user_pictures = UserPicture.all
     render "index.json.jbuilder"
@@ -16,7 +18,7 @@ class Api::UserPicturesController < ApplicationController
       user_id: current_user.id,
       attraction_id: params[:attraction_id]
       )
-    before_action :authenticate_user
+  
     if @user_picture.save
       render "show.json.jbuilder"
     else
@@ -24,7 +26,6 @@ class Api::UserPicturesController < ApplicationController
     end
   end
 
-before_action :authenticate_user
   def destroy
     @user_picture = UserPicture.find_by(id: params[:id])
     @user_picture.destroy
