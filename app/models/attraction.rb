@@ -8,4 +8,5 @@ class Attraction < ApplicationRecord
   has_many :trips, through: :itinerary_items
   belongs_to :category
   has_many :user_pictures
+  validates :name, :street_address, :city_id, :postal_code, :category_id, :average_time_spent, presence: true
 end
