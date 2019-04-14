@@ -25,5 +25,8 @@ Rails.application.routes.draw do
     post "/user_pictures" => "user_pictures#create"
     get "/user_pictures/:id" => "user_pictures#show"
     delete "/user_pictures/:id" => "user_pictures#destroy"
+    get "/tags" => "tags#index"
+    post "/tags" => "tags#create"
+    get "/tags/:id" => "tags#show"
   end
 end
