@@ -28,5 +28,6 @@ Rails.application.routes.draw do
     get "/tags" => "tags#index"
     post "/tags" => "tags#create"
     get "/tags/:id" => "tags#show"
+    get "/avatars/" => "avatars#index"
   end
 end
