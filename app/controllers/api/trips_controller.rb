@@ -3,7 +3,6 @@ class Api::TripsController < ApplicationController
 
   def index
     @trips = current_user.trips
-    @trips = Trip.all
     render "index.json.jbuilder"
   end
 

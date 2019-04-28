@@ -1,6 +1,9 @@
 class Api::AttractionsController < ApplicationController
   def index
     @attractions = Attraction.all
+    if params[:city_id]
+      @attractions = @attractions.where(city_id: params[:city_id])
+    end
     render "index.json.jbuilder"
   end
 
