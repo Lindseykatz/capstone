@@ -4,5 +4,4 @@ json.trip_name itinerary_item.trip.trip_name
 json.attraction_id itinerary_item.attraction_id
 json.attraction_name itinerary_item.attraction.name
 json.start_datetime itinerary_item.start_datetime
-
-
+json.full_address itinerary_item.attraction.full_address

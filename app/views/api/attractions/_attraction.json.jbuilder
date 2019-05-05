@@ -14,6 +14,7 @@ json.trips attraction.trips
 json.ratings attraction.ratings
 json.tags attraction.tags
 json.user_pictures attraction.user_pictures
+json.full_address attraction.full_address
 if current_user
   json.user_trips current_user.trips.select { |trip| trip.city_id == attraction.city_id }
 end
