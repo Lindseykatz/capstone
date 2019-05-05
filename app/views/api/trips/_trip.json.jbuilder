@@ -11,6 +11,7 @@ json.itinerary_items trip.itinerary_items.each do |itinerary_item|
   json.trip_name itinerary_item.trip.trip_name
   json.attraction_id itinerary_item.attraction_id
   json.attraction_name itinerary_item.attraction.name
+  json.attraction_address itinerary_item.attraction.full_address
   json.start_datetime itinerary_item.start_datetime
 end
 #TODO: load partial instead of using each loop

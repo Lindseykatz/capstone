@@ -9,4 +9,8 @@ class Attraction < ApplicationRecord
   belongs_to :category
   has_many :user_pictures
   validates :name, :street_address, :city_id, :postal_code, :category_id, :average_time_spent, presence: true
+
+  def full_address
+    "#{street_address}, #{city.city_name}"
+  end
 end
