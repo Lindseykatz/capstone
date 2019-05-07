@@ -22,6 +22,7 @@ class Api::ItineraryItemsController < ApplicationController
   def update
     @itinerary_item = ItineraryItem.find_by(id: params[:id])
     @itinerary_item.start_datetime = params[:start_datetime] || @itinerary_item.start_datetime
+    @itinerary_item.end_datetime = params[:end_datetime] || @itinerary_item.end_datetime
     # @itinerary_item.trip_id = params[:trip_id] || @itinerary_item.trip_id
     # @itinerary_item.attraction_id = params[:attraction_id] || @itinerary_item.attraction_id
     if @itinerary_item.save
