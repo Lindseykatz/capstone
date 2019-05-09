@@ -11,6 +11,6 @@ class Attraction < ApplicationRecord
   validates :name, :street_address, :city_id, :postal_code, :category_id, :average_time_minutes_spent, presence: true
 
   def full_address
-    "#{street_address}, #{city.city_name}"
+    "#{street_address}, #{city.city_name}, #{postal_code}"
   end
 end
