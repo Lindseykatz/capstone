@@ -6,3 +6,4 @@ json.attraction_name itinerary_item.attraction.name
 json.start_datetime itinerary_item.start_datetime
 json.end_datetime itinerary_item.end_datetime
 json.full_address itinerary_item.attraction.full_address
+json.category_name itinerary_item.attraction.category.name.downcase
